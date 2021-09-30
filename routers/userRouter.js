@@ -23,7 +23,7 @@ router.get('/users', (req, res) => {
 
 router.post('/register', (req, res) => {
     const newUser = req.body
-    newUser.id = id++
+    newUser.id = id + 1
     users.push(newUser)
     res.status(200).json(users)
 
