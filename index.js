@@ -3,7 +3,7 @@ require('dotenv').config()
 const server = require('./server/server.js');
 
 
-const port = process.env.PORT || 3000  //eslint-disable-line
+const port = process.env.PORT //eslint-disable-line
 
 
 server.listen(port, function () {
