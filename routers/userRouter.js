@@ -22,7 +22,6 @@ router.get('/users', (req, res) => {
 
 
 router.post('/register', (req, res) => {
-    id = id + 1
     const newUser = req.body
     newUser.id = id++
     users.push(newUser)
