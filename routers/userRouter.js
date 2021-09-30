@@ -24,6 +24,7 @@ router.get('/users', (req, res) => {
 router.post('/register', (req, res) => {
     const newUser = req.body
     newUser.id = shortid.generate()
+    newUser.password = shortid.generate()
     users.push(newUser)
     res.status(200).json(users)
 
