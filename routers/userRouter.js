@@ -1,5 +1,5 @@
 const express = require('express');
-
+const shortid = require('shortid');
 const router = express.Router()
 
 const users = [
@@ -8,10 +8,10 @@ const users = [
         password: '1234',
         age: 18,
         email: 'ehsan@gmail.com',
-        id: 1
+        id: shortid.generate()
     }
 ]
-let id = 1
+
 
 
 
@@ -23,7 +23,7 @@ router.get('/users', (req, res) => {
 
 router.post('/register', (req, res) => {
     const newUser = req.body
-    newUser.id = id++
+    newUser.id = shortid.generate()
     users.push(newUser)
     res.status(200).json(users)
 
